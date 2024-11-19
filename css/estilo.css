@@ -1,0 +1,314 @@
+/* Estilo Geral */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2d033b, #000000);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Principal */
+.login-wrapper {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Logo Principal */
+.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px #8a2be2, 0 0 30px #6a0dad;
+}
+
+.logo .highlight {
+    color: #8a2be2;
+}
+
+/* Caixa de Login */
+.login-box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px #6a0dad;
+}
+
+/* Estilo do Formulário */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    background: none;
+    border: 2px solid #8a2be2;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #fff;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #8a2be2;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+/* Botão */
+.btn-login {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(90deg, #8a2be2, #6a0dad);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #8a2be2;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #6a0dad, #8a2be2);
+    box-shadow: 0 0 25px #fff;
+}
+.btn-login {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(90deg, #8a2be2, #6a0dad);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #8a2be2;
+    transition: all 0.3s ease;
+}
+
+.btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: left 0.4s ease;
+}
+
+.btn-login:hover::before {
+    left: 100%;
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px #6a0dad;
+}
+input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 10px #8a2be2;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+body.login-page {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logo {
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.error-message {
+    background: #ff0000;
+    color: #fff;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease;
+}
+/* home.css */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2d033b, #000000);
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px #8a2be2;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav a.active,
+header nav a:hover {
+    color: #8a2be2;
+}
+
+.search-bar {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #2d033b;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+}
+
+.podcast-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.podcast-card {
+    background: #1a0125;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.podcast-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.podcast-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+}
+
+.podcast-card p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.podcast-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+.podcast-list {
+    max-height: 500px; /* Defina a altura que você deseja para a lista */
+    overflow-y: scroll; /* Isso adiciona a barra de rolagem */
+}
+.podcast-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #3a1d38;
+}
+.btn-clique-aqui {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #6a0dad; /* Cor roxa */
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-clique-aqui:hover {
+    background-color: #4b0082; /* Tom mais escuro ao passar o mouse */
+}
+
