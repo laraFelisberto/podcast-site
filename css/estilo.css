@@ -300,7 +300,7 @@ footer {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 16px;
-    color: #fff;
+    color: #ffffff;
     background-color: #6a0dad; /* Cor roxa */
     border-radius: 4px;
     text-decoration: none;
@@ -311,4 +311,56 @@ footer {
 .btn-clique-aqui:hover {
     background-color: #4b0082; /* Tom mais escuro ao passar o mouse */
 }
+.podcast-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de tamanho igual */
+    gap: 20px; /* Espaçamento entre os cartões */
+    margin: 20px auto; /* Centraliza a lista */
+    max-width: 1200px; /* Largura máxima da lista */
+}
 
+.podcast-card {
+    background-color: #34062d; /* Fundo claro para destacar o cartão */
+    border: 1px solid #ddd; /* Bordas sutis */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    display: flex;
+    flex-direction: column; /* Itens alinhados verticalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    text-align: center; /* Centraliza o texto */
+}
+
+.podcast-card img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
+    height: 200px; /* Define altura fixa para as imagens */
+    object-fit: cover; /* Ajusta as imagens para preencher o espaço */
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+}
+
+.btn-clique-aqui {
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #f4f4f4;
+    background-color: #6a0dad; /* Cor roxa */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-clique-aqui:hover {
+    background-color: #4b0082; /* Tom mais escuro ao passar o mouse */
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .podcast-list {
+        grid-template-columns: 1fr; /* Apenas 1 coluna em telas menores */
+    }
+}
